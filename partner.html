@@ -1,0 +1,237 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Be Our Partner</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons/font/bootstrap-icons.css">
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            display: flex;
+            flex-direction: column;
+            min-height: 100vh;
+            overflow-x: hidden;
+            width: 100%;
+            max-width: 100vw;
+        }
+
+        /* Video Background */
+
+.video-container {
+    position: absolute;
+    top: 56px; /* Adjust based on navbar height */
+    left: 0;
+    width: 100%;
+    height: calc(100% - 56px); /* Ensure it fills remaining space */
+    overflow: hidden;
+    z-index: -1;
+}
+
+.video-container video {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+        .content {
+            flex: 1; /* Pushes footer to the bottom */
+            position: relative;
+            z-index: 1;
+            text-align: center;
+            color: white;
+            padding-bottom: 50px; /* Avoid overlap with footer */
+        }
+
+        .navbar {
+            background: black !important; /* Make navbar slightly transparent */
+            position: relative;
+            z-index: 2;
+        }
+
+.about-us {
+    background: linear-gradient(135deg, #000000, #1e1e1e, #2a2a2a); /* Smooth color blend */
+    padding: 60px 20px;
+    text-align: center;
+    color: white;
+}
+
+.about-us h2 {
+    font-size: 2rem;
+    font-weight: bold;
+    background: linear-gradient(90deg, #FFD700, #FFA500);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent; /* Gradient text effect */
+}
+
+.about-us p {
+    max-width: 800px;
+    margin: 0 auto;
+    font-size: 1.1rem;
+}
+
+.whatsapp-icon {
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+    background: #25D366;
+    color: white;
+    font-size: 24px;
+    padding: 10px 15px;
+    border-radius: 50%;
+    box-shadow: 2px 2px 10px rgba(0, 0, 0, 0.2);
+    z-index: 10;
+}
+
+ .text-gradient {
+        background: linear-gradient(90deg, #FFD700, #FFA500);
+        -webkit-background-clip: text;
+        -webkit-text-fill-color: transparent;
+    }
+
+    .register {
+             max-width: 600px; /* Ensures a fixed width */
+    width: 90%
+        }
+        .card {
+            padding: 20px;
+            border-radius: 10px;
+            box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
+        }
+
+
+
+
+        /* Fixed Footer */
+.footer {
+    background: rgba(0, 0, 0, 0.8);
+    color: white;
+    text-align: center;
+    padding: 15px;
+    width: 100%;
+    margin-top: auto; /* Ensures it stays at the bottom */
+}
+    </style>
+</head>
+<body>
+
+
+
+    <!-- Navbar -->
+    <nav class="navbar navbar-expand-lg navbar-dark">
+        <div class="container">
+            <a class="navbar-brand" href="#">
+                <h3 style="color: white">
+                    <span style="color: yellow">RYLEX </span>
+                    <span style="color: yellowgreen">LOGISTICS</span>
+                </h3>
+            </a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse justify-content-end" id="navbarNav">
+                <ul class="navbar-nav">
+                    <li class="nav-item"><a class="nav-link active" href="#">Home</a></li>
+                    <li class="nav-item"><a class="nav-link" href="#">Services</a></li>
+                    <li class="nav-item"><a class="nav-link" href="partner.html">Be Our Partner</a></li>
+                    <li class="nav-item"><a class="nav-link" href="#">Be Our VIP</a></li>
+                    <li class="nav-item"><a class="nav-link" href="#">Locations</a></li>
+                    <li class="nav-item"><a class="nav-link" href="#">Events</a></li>
+                    <li class="nav-item"><a class="nav-link" href="#">Careers</a></li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+
+    <!-- About Us Section -->
+<section class="about-us py-5">
+    <div class="container text-center text-white">
+        <h2 class="mb-4">Become our Drop-Off Partner</h2>
+        <p class="lead">
+            Join us as an official J&T Secondary Courier Point (SCP) Business Partner and drive more traffic to your shop while earning additional revenue.
+        </p>
+    </div>
+</section>
+
+<div class="d-flex justify-content-center align-items-center vh-100">
+    <div class="register">
+        <div class="card">
+            <h2 class="text-center">Contact Us</h2>
+            <form id="contactForm">
+                <div class="mb-3">
+                    <label for="name" class="form-label">Name</label>
+                    <input type="text" class="form-control" id="name" required>
+                </div>
+                <div class="mb-3">
+                    <label for="email" class="form-label">Email</label>
+                    <input type="email" class="form-control" id="email" required>
+                </div>
+                <div class="mb-3">
+                    <label for="message" class="form-label">Message</label>
+                    <textarea class="form-control" id="message" rows="4" required></textarea>
+                </div>
+                <button type="submit" class="btn btn-primary w-100">Submit</button>
+            </form>
+            <p id="responseMessage" class="mt-3 text-center"></p>
+        </div>
+    </div>
+</div>
+
+
+    <!-- WhatsApp Floating Button -->
+<a href="https://api.whatsapp.com/send/?phone=9997305983&text=Hello%2C%20Rylex%20Logistics%21%20I%E2%80%99m%20interested%20in%20your%20logistics%20and%20delivery%20services.%20Could%20you%20please%20provide%20more%20details%20about%20your%20pricing%2C%20service%20areas%2C%20and%20delivery%20options%3F%20Looking%20forward%20to%20your%20response.%20Thanks%21" target="_blank" class="whatsapp-icon">
+    <i class="bi bi-whatsapp"></i>
+</a>
+
+
+    <!-- Fixed Footer -->
+    <footer class="footer">
+        <p>© 2025 Logistics | Made by - Anuj Kothiyal</p>
+        <div>
+            <a href="#" class="text-white mx-2"><i class="bi bi-facebook"></i></a>
+            <a href="#" class="text-white mx-2"><i class="bi bi-twitter"></i></a>
+            <a href="#" class="text-white mx-2"><i class="bi bi-instagram"></i></a>
+        </div>
+    </footer>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+
+<script>
+        document.getElementById("contactForm").addEventListener("submit", function(event) {
+            event.preventDefault();
+
+            // Replace with your Google Form URL (pre-filled format)
+            const googleFormURL = "https://docs.google.com/forms/u/0/d/e/1FAIpQLSdsP2fBuh0arV3DKfoUsJMCMz6VlUmWh2rJ27xE65FGAQga3Q/formResponse";
+
+            // Get form values
+            const name = document.getElementById("name").value;
+            const email = document.getElementById("email").value;
+            const message = document.getElementById("message").value;
+
+            // Google Forms field entry numbers (Inspect form page to find these)
+            const formData = new FormData();
+            formData.append("entry.1999457812", name);  // Replace with actual entry ID
+            formData.append("entry.1002509747", email); // Replace with actual entry ID
+            formData.append("entry.1333805125", message); // Replace with actual entry ID
+
+            fetch(googleFormURL, {
+                method: "POST",
+                body: formData,
+                mode: "no-cors"
+            }).then(() => {
+                document.getElementById("responseMessage").textContent = "✅ Your message has been sent!";
+                document.getElementById("contactForm").reset();
+            }).catch(() => {
+                document.getElementById("responseMessage").textContent = "❌ There was an error. Please try again!";
+            });
+        });
+    </script>
+</body>
+</html>
